@@ -1,0 +1,16 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}
+Add announcement
+{% endblock %}
+
+{% block content %}
+<h1>Adding an announcement</h1>
+<form action="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add">
+</form>
+{% endblock %}
+
+
